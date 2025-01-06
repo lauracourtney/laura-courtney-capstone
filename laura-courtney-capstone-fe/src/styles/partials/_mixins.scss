@@ -1,0 +1,38 @@
+@use "./variables" as *;
+
+@mixin font($family, $size, $height, $weight) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flex-box(
+  $justify-content: none,
+  $align-items: none,
+  $wrap: nowrap,
+  $flex-direction: row
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  flex-direction: $flex-direction;
+}
+
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

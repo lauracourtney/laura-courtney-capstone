@@ -1,0 +1,9 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  background-image: url(../../assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
