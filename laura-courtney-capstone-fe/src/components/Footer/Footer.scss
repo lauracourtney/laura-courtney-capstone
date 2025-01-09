@@ -1,0 +1,33 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  @include mobile-styling;
+  @include flex-box(space-between, flex-start);
+  color: $primary-color-dark;
+}
+
+.location {
+  width: 30%;
+  &__title {
+    font-weight: bold;
+  }
+}
+
+.contact {
+  width: 40%;
+}
+
+.socials {
+  &__icon {
+    @include height-width(2rem, 2rem);
+    fill: $primary-color-dark;
+    padding-left: 0.5rem;
+    width: 30%;
+
+    &:hover {
+      fill: $secondary-color-dark;
+    }
+  }
+}

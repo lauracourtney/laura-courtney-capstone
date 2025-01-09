@@ -18,11 +18,9 @@ export default function Header() {
         <h2 className="header__title">Voyagers Haven</h2>
       </div>
 
-      <nav>
-        <ul className="header__navigation">
-          <li className="header__link">Home</li>
-          <li className="header__link">Booking</li>
-        </ul>
+      <nav className="header__navigation">
+        <h3 className="header__link">Home</h3>
+        <h3 className="header__link">Booking</h3>
       </nav>
     </header>
   );

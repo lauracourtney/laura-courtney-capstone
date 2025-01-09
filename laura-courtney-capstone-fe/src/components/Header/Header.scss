@@ -3,9 +3,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  background-color: $primary-color-light;
+  @include mobile-styling;
   @include flex-box(space-between, center);
-  padding: 1rem;
+
+  @include tablet {
+    padding: 0 0 2.5rem 0;
+  }
 
   &__logo {
     fill: $primary-color-dark;
@@ -24,5 +27,10 @@
   &__link {
     list-style: none;
     padding-right: 1rem;
+    color: $primary-color;
+
+    &:hover {
+      color: $primary-color-dark;
+    }
   }
 }

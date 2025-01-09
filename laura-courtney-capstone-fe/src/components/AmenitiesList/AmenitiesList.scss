@@ -1,0 +1,43 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.amenities {
+  @include mobile-styling;
+
+  @include desktop {
+    @include flex-box(center, center);
+  }
+}
+
+.item {
+  @include flex-box(flex-start, flex-start, nowrap, column-reverse);
+  padding-bottom: 2rem;
+
+  @include tablet {
+    @include flex-box(flex-start, flex-start, nowrap, row);
+  }
+
+  &__photo {
+    @include height-width(auto, 100%);
+    padding-bottom: 1rem;
+
+    @include tablet {
+      @include height-width(17rem, 17rem);
+    }
+  }
+
+  &__description {
+    @include tablet {
+      padding-left: 1rem;
+    }
+  }
+
+  &__title {
+    padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding-left: 1rem;
+    }
+  }
+}

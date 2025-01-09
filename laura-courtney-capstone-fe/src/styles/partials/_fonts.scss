@@ -2,74 +2,78 @@
 @use "./variables" as *;
 
 @font-face {
-  font-family: "Merriweather";
-  src: url("../../assets/fonts/MerriweatherSans-Regular.ttf") format("ttf");
+  font-family: "MerriweatherSan";
+  src: url("../../assets/fonts/MerriweatherSans-Regular.woff") format("woff");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../assets/fonts//Poppins-Regular.ttf") format("ttf");
+  font-family: "MerriweatherSan";
+  src: url("../../assets/fonts/MerriweatherSans-Regular.woff") format("woff");
   font-weight: 400;
 }
 
-// BODY MEDIUM
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
 body {
-  color: $primary-color-dark;
-  @include font("Merriweather", 0.8125rem, 0.9375rem, 400);
+  @include font("MerriweatherSan", 0.8125rem, 0.9375rem, 400);
   @include tablet {
-    @include font("Merriweather", 0.875rem, 1.375rem, 400);
+    @include font("MerriweatherSan", 0.875rem, 1.375rem, 400);
+    color: $primary-color-dark;
   }
 }
 
-// PAGE HEADER
 h1 {
-  @include font("Merriweather", 1.75rem, 2.25rem, 600);
+  @include font("MerriweatherSan", 1.75rem, 2.25rem, 600);
   @include tablet {
-    @include font("Merriweather", 2rem, 2.5rem, 600);
+    @include font("MerriweatherSan", 2rem, 2.5rem, 600);
   }
 }
 
-// SUBHEADER
 h2 {
-  @include font("Merriweather", 1.25rem, 1.75rem, 600);
+  @include font("MerriweatherSan", 1.25rem, 1.75rem, 600);
   @include tablet {
-    @include font("Merriweather", 1.5rem, 2rem, 600);
+    @include font("MerriweatherSan", 1.5rem, 2rem, 600);
   }
 }
 
-// LABELS, LINKS, & BUTTONS
 h3 {
-  @include font("Merriweather", 0.8125rem, 1.25rem, 600);
+  @include font("MerriweatherSan", 0.8125rem, 1.25rem, Bold);
 
   @include tablet {
-    @include font("Merriweather", 0.875rem, 1.375rem, 600);
+    @include font("MerriweatherSan", 0.875rem, 1.375rem, 600);
   }
 }
 
-// TABLE HEADER
 h4 {
-  @include font("Merriweather", 0.6875rem, 1rem, 600);
-  color: $secondary-color-dark;
+  @include font("MerriweatherSan", 0.6875rem, 1rem, 600);
   @include tablet {
-    @include font("Merriweather", 0.75rem, 1.125rem, 600);
+    @include font("MerriweatherSan", 0.75rem, 1.125rem, 600);
   }
 }
 
-// H5 IS BODY LARGE
 h5 {
-  @include font("Merriweather", 0.9375rem, 1.625rem, 400);
+  @include font("MerriweatherSan", 0.9375rem, 1rem, 400);
 
   @include tablet {
-    @include font("Merriweather", 1rem, 1.75rem, 400);
+    @include font("MerriweatherSan", 1rem, 1.75rem, 400);
   }
 }
 
-// H6 IS BODY SMALL
 h6 {
-  @include font("Merriweather", 0.6875rem, 1rem, 400);
+  @include font("MerriweatherSan", 0.6875rem, 1rem, 400);
 
   @include tablet {
-    @include font("Merriweather", 0.75rem, 1.125rem, 400);
+    @include font("MerriweatherSan", 0.75rem, 1.125rem, 400);
   }
 }

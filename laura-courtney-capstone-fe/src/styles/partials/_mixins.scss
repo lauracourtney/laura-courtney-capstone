@@ -25,6 +25,16 @@
   flex-direction: $flex-direction;
 }
 
+@mixin mobile-styling {
+  padding: 1rem;
+  background-color: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+@mixin tablet-padding {
+  padding: 2rem;
+}
+
 @mixin tablet {
   @media screen and (min-width: $breakpoint-tablet) {
     @content;

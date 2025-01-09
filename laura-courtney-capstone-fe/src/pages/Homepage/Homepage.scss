@@ -2,8 +2,20 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.home {
+  @include tablet {
+    padding: 2.5rem;
+    background-color: $primary-color-light;
+  }
+}
+
 .hero {
-  background-image: url(../../assets/images/hero.jpg);
+  background-image: url("../../assets/images/hero.jpg");
   background-size: cover;
   background-position: center;
+  @include height-width(20rem, 100%);
+
+  @include tablet {
+    @include height-width(30rem, 100%);
+  }
 }
