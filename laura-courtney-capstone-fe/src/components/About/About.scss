@@ -3,9 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .about {
-  background-color: $primary-color-light;
-  padding: 1rem;
-  color: $primary-color-dark;
+  @include mobile-styling;
 
   @include tablet {
     padding: 2rem;

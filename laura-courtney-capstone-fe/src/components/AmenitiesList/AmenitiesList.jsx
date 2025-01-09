@@ -60,7 +60,11 @@ export default function AmenitiesList() {
         </div>
 
         <div className="item">
-          <img src={lighting} alt="" className="item__photo" />
+          <img
+            src={lighting}
+            alt="a wooden room with a stain glass window featuring florals"
+            className="item__photo"
+          />
           <div className="item__details">
             <h5 className="item__title">Natural Lighting & Decor</h5>
             <p className="item__description">
@@ -74,7 +78,11 @@ export default function AmenitiesList() {
 
       <div className="amenitities__right">
         <div className="item">
-          <img src={fireplace} alt="" className="item__photo" />
+          <img
+            src={fireplace}
+            alt="a room featuring a stone fireplace"
+            className="item__photo"
+          />
           <div className="item__details">
             <h5 className="item__title">Indoor & Outdoor Fire</h5>
             <p className="item__description">
@@ -87,7 +95,11 @@ export default function AmenitiesList() {
         </div>
 
         <div className="item">
-          <img src={dock} alt="" className="item__photo" />
+          <img
+            src={dock}
+            alt="a dock stretching out into the ocean"
+            className="item__photo"
+          />
           <div className="item__details">
             <h5 className="item__title">Waterfront Access</h5>
             <p className="item__description">
@@ -102,7 +114,11 @@ export default function AmenitiesList() {
         </div>
 
         <div className="item">
-          <img src={hottub} alt="" className="item__photo" />
+          <img
+            src={hottub}
+            alt="a wooden hot tub on a deck"
+            className="item__photo"
+          />
           <div className="item__details">
             <h5 className="item__title">Private Hot Tub</h5>
             <p className="item__description">
@@ -113,7 +129,11 @@ export default function AmenitiesList() {
         </div>
 
         <div className="item">
-          <img src={sauna} alt="" className="item__photo" />
+          <img
+            src={sauna}
+            alt="a round wooden two-person sauna"
+            className="item__photo"
+          />
           <div className="item__details">
             <h5 className="item__title">Outdoor Sauna</h5>
             <p className="item__description">
