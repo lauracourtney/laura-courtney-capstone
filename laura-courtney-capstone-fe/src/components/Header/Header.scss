@@ -7,12 +7,13 @@
   @include flex-box(space-between, center);
 
   @include tablet {
-    padding: 0 0 2.5rem 0;
+    padding: 2rem;
   }
 
   &__logo {
     fill: $primary-color-dark;
     @include height-width(2rem, 2rem);
+    min-width: 2rem;
     padding-right: 0.5rem;
   }
 
@@ -28,6 +29,7 @@
     list-style: none;
     padding-right: 1rem;
     color: $primary-color;
+    text-decoration: none;
 
     &:hover {
       color: $primary-color-dark;

@@ -76,7 +76,7 @@ export default function AmenitiesList() {
         </div>
       </div>
 
-      <div className="amenitities__right">
+      <div className="amenities__right">
         <div className="item">
           <img
             src={fireplace}

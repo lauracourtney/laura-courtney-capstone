@@ -6,6 +6,10 @@
   @include mobile-styling;
   @include flex-box(space-between, flex-start);
   color: $primary-color-dark;
+
+  @include tablet {
+    padding: 2rem;
+  }
 }
 
 .location {

@@ -1,0 +1,47 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reservation {
+  @include mobile-styling;
+
+  &__guests {
+    @include flex-box(flex-start, flex-start, nowrap, column);
+  }
+
+  &__dates {
+    @include flex-box(flex-start, center);
+  }
+
+  &__checkin {
+    @include flex-box(center, center, nowrap, column);
+    padding: 1rem 9rem 1rem 0;
+  }
+}
+
+.adults {
+  padding: 0.5rem 0;
+  @include flex-box(flex-start, center);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+}
+
+.children {
+  padding: 0.5rem 0;
+  @include flex-box(flex-start, center);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+}
+
+.pets {
+  padding: 0.5rem 0;
+  @include flex-box(flex-start, center);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+}

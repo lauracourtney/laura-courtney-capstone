@@ -19,11 +19,14 @@ export default function Header() {
       </div>
 
       <nav className="header__navigation">
-        <NavLink to="/">
-          <h3 className="header__link">Home</h3>
+        <NavLink to="/" className="header__link">
+          <h3 className="header__item">Home</h3>
         </NavLink>
-        <NavLink to="/booking">
-          <h3 className="header__link">Booking</h3>
+        <NavLink to="/booking" className="header__link">
+          <h3 className="header__item">Booking</h3>
+        </NavLink>
+        <NavLink to="/booking" className="header__link">
+          <h3 className="header__item">Local Attractions</h3>
         </NavLink>
       </nav>
     </header>

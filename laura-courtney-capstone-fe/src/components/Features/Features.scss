@@ -1,0 +1,38 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.features {
+  @include mobile-styling;
+
+  &__title {
+    padding-bottom: 1rem;
+  }
+
+  &__subtitle {
+    padding-bottom: 0.5rem;
+  }
+
+  &__flexbox {
+    @include flex-box(flex-start, center);
+  }
+
+  &__left {
+    padding-right: 3rem;
+  }
+}
+
+.feature {
+  @include flex-box(flex-start, center);
+  padding-bottom: 0.25rem;
+
+  &__icon {
+    @include height-width(2.5rem, 2.5rem);
+    min-width: 2.5rem;
+    fill: $secondary-color-dark;
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+  }
+}

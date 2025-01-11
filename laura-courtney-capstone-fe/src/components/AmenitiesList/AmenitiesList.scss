@@ -2,20 +2,44 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+* {
+  box-sizing: border-box;
+}
+
 .amenities {
   @include mobile-styling;
 
   @include desktop {
-    @include flex-box(center, center);
+    @include flex-box(space-between, baseline);
+  }
+
+  &__left {
+    @include desktop {
+      width: 45%;
+    }
+  }
+
+  &__right {
+    @include desktop {
+      width: 45%;
+    }
   }
 }
 
 .item {
   @include flex-box(flex-start, flex-start, nowrap, column-reverse);
-  padding-bottom: 2rem;
+  padding: 1rem;
+  background-color: $secondary-color-light;
+  border-radius: 1%;
+  margin-bottom: 1rem;
+  border: 0.15rem solid $secondary-color-dark;
 
   @include tablet {
     @include flex-box(flex-start, flex-start, nowrap, row);
+  }
+
+  &__details {
+    padding-bottom: 1rem;
   }
 
   &__photo {
@@ -23,7 +47,8 @@
     padding-bottom: 1rem;
 
     @include tablet {
-      @include height-width(17rem, 17rem);
+      @include height-width(16.5rem, 16.5rem);
+      padding: 0;
     }
   }
 
