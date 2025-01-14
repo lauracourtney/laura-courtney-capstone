@@ -18,4 +18,8 @@
   @include tablet {
     @include height-width(30rem, 100%);
   }
+
+  @include desktop {
+    @include height-width(35rem, 100%);
+  }
 }

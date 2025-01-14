@@ -1,0 +1,25 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.confirm-modal {
+  background-color: $primary-color-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include height-width(100vh, 100%);
+  z-index: 3;
+
+  @include tablet {
+    @include height-width(16rem, auto);
+    top: 12.5rem;
+    right: 2rem;
+    left: 2rem;
+    margin: 0 1rem;
+  }
+
+  @include desktop {
+    right: 20rem;
+    left: 20rem;
+  }
+}

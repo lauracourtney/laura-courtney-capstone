@@ -1,0 +1,19 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.breakdown {
+  @include mobile-styling;
+
+  &__item {
+    padding-bottom: 0.5rem;
+  }
+
+  &__border {
+    border-bottom: 0.25rem solid $primary-color-dark;
+  }
+
+  &__total {
+    padding-top: 0.5rem;
+  }
+}

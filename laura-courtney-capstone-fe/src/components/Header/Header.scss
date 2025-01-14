@@ -11,14 +11,11 @@
   }
 
   &__logo {
-    fill: $primary-color-dark;
-    @include height-width(2rem, 2rem);
-    min-width: 2rem;
-    padding-right: 0.5rem;
-  }
+    @include height-width(3rem, auto);
 
-  &__left {
-    @include flex-box(center, center);
+    @include tablet {
+      @include height-width(5rem, auto);
+    }
   }
 
   &__navigation {

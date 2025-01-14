@@ -5,22 +5,26 @@
 .footer {
   @include mobile-styling;
   @include flex-box(space-between, flex-start);
-  color: $primary-color-dark;
 
-  @include tablet {
-    padding: 2rem;
+  &__logo {
+    @include height-width(6rem, auto);
   }
 }
 
 .location {
   width: 30%;
+
   &__title {
-    font-weight: bold;
+    padding-bottom: 0.5rem;
   }
 }
 
 .contact {
   width: 40%;
+
+  &__title {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .socials {

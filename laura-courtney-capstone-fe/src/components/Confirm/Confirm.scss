@@ -1,0 +1,43 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.confirmation {
+  @include mobile-styling;
+
+  &__title {
+    padding-bottom: 1rem;
+  }
+
+  &__back {
+    @include height-width(2rem, 2rem);
+    z-index: 10;
+    cursor: pointer;
+    fill: $secondary-color-dark;
+    margin-bottom: 2rem;
+  }
+}
+
+.confirm-adults {
+  &__item {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.confirm-children {
+  &__item {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.confirm-pets {
+  &__item {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.confirm-dates {
+  &__date {
+    padding-bottom: 0.25rem;
+  }
+}

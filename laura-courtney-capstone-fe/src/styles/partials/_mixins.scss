@@ -35,6 +35,22 @@
   padding: 2rem;
 }
 
+@mixin button {
+  border: 0.15rem solid $secondary-color-dark;
+  border-radius: 0.5rem;
+  background-color: $secondary-color-light;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@mixin dropdown {
+  border: 0.15rem solid $secondary-color-dark;
+  border-radius: 0.5rem;
+  background-color: $secondary-color-light;
+  padding: 0.25rem 0.5rem;
+}
+
 @mixin tablet {
   @media screen and (min-width: $breakpoint-tablet) {
     @content;

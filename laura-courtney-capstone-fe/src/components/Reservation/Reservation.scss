@@ -4,18 +4,36 @@
 
 .reservation {
   @include mobile-styling;
+  position: relative;
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  &__rate {
+    padding-top: 1rem;
+  }
 
   &__guests {
     @include flex-box(flex-start, flex-start, nowrap, column);
   }
 
   &__dates {
-    @include flex-box(flex-start, center);
+    @include flex-box(center, center);
+    padding-top: 1rem;
+  }
+
+  &__date {
+    color: $secondary-color-dark;
   }
 
   &__checkin {
     @include flex-box(center, center, nowrap, column);
-    padding: 1rem 9rem 1rem 0;
+    padding: 1rem 4rem 1rem 0;
+  }
+
+  &__button {
+    @include button;
   }
 }
 
@@ -26,6 +44,10 @@
   &__label {
     padding-right: 0.5rem;
   }
+
+  &__dropdown {
+    @include dropdown;
+  }
 }
 
 .children {
@@ -35,13 +57,30 @@
   &__label {
     padding-right: 0.5rem;
   }
+
+  &__dropdown {
+    @include dropdown;
+  }
 }
 
 .pets {
   padding: 0.5rem 0;
-  @include flex-box(flex-start, center);
+  @include flex-box(flex-start, baseline);
 
   &__label {
     padding-right: 0.5rem;
   }
+
+  &__dropdown {
+    @include dropdown;
+  }
+}
+
+.react-calendar {
+  @include height-width(auto, 100% !important);
+  background-color: $secondary-color-light !important;
+  border: 1px solid $primary-color-dark !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-size: 1.25rem;
+  line-height: 1.5rem !important;
 }
