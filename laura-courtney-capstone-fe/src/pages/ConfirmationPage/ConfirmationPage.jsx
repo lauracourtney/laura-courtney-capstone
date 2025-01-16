@@ -10,6 +10,7 @@ export default function ConfirmationPage({
   checkIn,
   checkOut,
   closeModal,
+  rates,
 }) {
   return (
     <section className="confirm-modal">
@@ -21,7 +22,7 @@ export default function ConfirmationPage({
         checkOut={checkOut}
         closeModal={closeModal}
       />
-      <Pricing />
+      <Pricing pets={pets} rates={rates} />
       <DetailsForm />
     </section>
   );

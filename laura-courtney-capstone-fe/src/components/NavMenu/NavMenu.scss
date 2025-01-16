@@ -1,0 +1,32 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navigation {
+  @include mobile-styling;
+  padding-bottom: 1rem;
+
+  &__menu {
+    @include flex-box(space-evenly, baseline);
+
+    @include tablet {
+      @include flex-box(flex-end, flex-end, nowrap, column);
+      padding: 0 2rem;
+    }
+  }
+
+  &__link {
+    list-style: none;
+    padding-right: 1rem;
+    color: $primary-color;
+    text-decoration: none;
+
+    @include tablet {
+      padding-right: 0;
+    }
+
+    &:hover {
+      color: $primary-color-dark;
+    }
+  }
+}

@@ -12,7 +12,6 @@ export default function Confirm({
     <section className="confirmation">
       <svg
         onClick={() => {
-          console.log("SVG clicked");
           closeModal();
         }}
         className="confirmation__back"

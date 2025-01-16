@@ -3,6 +3,7 @@ import { useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import "./Reservation.scss";
 import ConfirmationPage from "../../pages/ConfirmationPage/ConfirmationPage.jsx";
+import axios from "axios";
 
 export default function Reservation() {
   const [checkIn, setCheckIn] = useState(null);
@@ -11,6 +12,8 @@ export default function Reservation() {
   const [children, setChildren] = useState(0);
   const [pets, setPets] = useState(0);
   const [openConfirmModal, setOpenConfirmModal] = useState(null);
+  const [error, setError] = useState(null);
+  const [rates, setRates] = useState("0");
 
   const openModal = () => {
     setOpenConfirmModal(true);
@@ -21,12 +24,22 @@ export default function Reservation() {
     setOpenConfirmModal(false);
   };
 
-  const handleDateChange = (value) => {
-    if (value[0] === value[1]) {
+  const handleDateChange = async (value) => {
+    if (value[0].getTime() === value[1].getTime()) {
       alert("Please select a valid date range, minimum one night stay");
     } else {
       setCheckIn(value[0]);
       setCheckOut(value[1]);
+    }
+    console.log("date value", value);
+
+    try {
+      let url = `http://localhost:8080/api/rates`;
+      const response = await axios.post(url, value);
+      setRates(response.data);
+    } catch (error) {
+      console.error("Error fetching rates data", error);
+      setError("Failed to fetch rates");
     }
   };
 
@@ -92,6 +105,8 @@ export default function Reservation() {
           <h2 className="reservation__date">{checkOut?.toDateString()}</h2>
         </div>
       </div>
+
+      {console.log("value", [checkIn, checkOut])}
       <Calendar
         onChange={handleDateChange}
         value={[checkIn, checkOut]}
@@ -100,7 +115,10 @@ export default function Reservation() {
         next2Label="Next"
         prev2Label="Prev"
       />
-      <h2 className="reservation__rate">Rate for selected dates:</h2>
+
+      <h2 className="reservation__rate">
+        Rate for selected dates: ${rates.rateFee}
+      </h2>
       <button className="reservation__button" onClick={openModal}>
         <h3>Proceed to Booking Confirmation</h3>
       </button>
@@ -114,6 +132,7 @@ export default function Reservation() {
             checkIn={checkIn}
             checkOut={checkOut}
             closeModal={closeModal}
+            rates={rates}
           />
         </>
       )}
