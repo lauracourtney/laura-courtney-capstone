@@ -9,6 +9,30 @@
     @include tablet-padding;
   }
 
+  &__top {
+    @include reservation-section-title;
+    padding-bottom: 0.5rem;
+  }
+
+  &__title {
+    min-width: 12.5rem;
+
+    @include tablet {
+      min-width: 15rem;
+    }
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
+
+  &__contents {
+    @include tablet {
+      @include flex-box(space-between, center);
+      padding-bottom: 2rem;
+    }
+  }
+
   &__rate {
     padding-top: 1rem;
   }
@@ -18,17 +42,30 @@
   }
 
   &__dates {
-    @include flex-box(center, center);
+    @include flex-box(space-between, center);
     padding-top: 1rem;
-  }
 
-  &__date {
-    color: $secondary-color-dark;
+    @include tablet {
+      @include flex-box(flex-start, center, nowrap, column);
+      padding: 0;
+    }
   }
 
   &__checkin {
-    @include flex-box(center, center, nowrap, column);
-    padding: 1rem 4rem 1rem 0;
+    @include flex-box(center, flex-start, nowrap, column);
+
+    @include tablet {
+      @include flex-box(flex-start, flex-end, nowrap, column);
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__checkout {
+    @include flex-box(center, flex-end, nowrap, column);
+
+    @include tablet {
+      @include flex-box(flex-start, flex-end, nowrap, column);
+    }
   }
 
   &__button {
@@ -38,7 +75,7 @@
 
 .adults {
   padding: 0.5rem 0;
-  @include flex-box(flex-start, center);
+  @include flex-box(space-between, center);
 
   &__label {
     padding-right: 0.5rem;
@@ -77,9 +114,24 @@
 
 .react-calendar {
   @include height-width(auto, 100% !important);
-  background-color: $secondary-color-light !important;
+  background-color: $primary-color !important;
   border: 1px solid $primary-color-dark !important;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
   font-size: 1.25rem;
   line-height: 1.5rem !important;
+  margin-top: 1rem;
+}
+
+.rate {
+  padding: 2rem 1rem 1rem 1rem;
+  @include flex-box(flex-start, center, nowrap, column);
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $secondary-color-light;
+  @include height-width(100vh, 100%);
+  z-index: 2;
 }

@@ -9,6 +9,10 @@
 .amenities {
   @include mobile-styling;
 
+  @include tablet {
+    padding: 0rem;
+  }
+
   @include desktop {
     @include flex-box(space-between, baseline);
   }
@@ -32,10 +36,16 @@
   background-color: $secondary-color-light;
   border-radius: 1%;
   margin-bottom: 1rem;
-  border: 0.15rem solid $secondary-color-dark;
+  box-shadow: 0 6px 12px rgba(74, 64, 54, 0.3), 0 2px 4px rgba(74, 64, 54, 0.2);
 
   @include tablet {
     @include flex-box(flex-start, flex-start, nowrap, row);
+    padding: 2rem;
+  }
+
+  @include desktop {
+    @include flex-box(space-between, center, nowrap, column-reverse);
+    min-height: 50rem;
   }
 
   &__details {
@@ -44,11 +54,16 @@
 
   &__photo {
     @include height-width(auto, 100%);
-    padding-bottom: 1rem;
+    border: 0.15rem solid $secondary-color-dark;
+    border-radius: 1%;
 
     @include tablet {
       @include height-width(16.5rem, 16.5rem);
       padding: 0;
+    }
+
+    @include desktop {
+      @include height-width(30rem, auto);
     }
   }
 

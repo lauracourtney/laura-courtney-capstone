@@ -11,17 +11,26 @@
     @include tablet {
       padding: 2rem 2rem 0 2rem;
     }
-  }
 
-  &__logo {
-    @include height-width(3rem, auto);
-
-    @include tablet {
-      @include height-width(5rem, auto);
+    @include desktop {
+      padding: 2rem 6rem;
     }
   }
 
+  &__logo {
+    @include logo;
+  }
+
   &__icon {
-    @include height-width(2rem, 2rem);
+    @include height-width(1.5rem, 1.5rem);
+    fill: $primary-color;
+
+    :hover {
+      cursor: pointer;
+    }
+
+    @include tablet {
+      @include height-width(2rem, 2rem);
+    }
   }
 }

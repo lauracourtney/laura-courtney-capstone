@@ -1,0 +1,15 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.booking-page {
+  background-color: $primary-color-light;
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  @include desktop {
+    @include desktop-padding;
+  }
+}

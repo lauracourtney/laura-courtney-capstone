@@ -4,32 +4,56 @@
 
 .features {
   @include mobile-styling;
+  padding-bottom: 0rem;
+
+  @include tablet {
+    @include tablet-padding;
+  }
 
   &__title {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__features {
+    @include reservation-section-title;
   }
 
   &__subtitle {
     padding-bottom: 0.5rem;
+    min-width: 12rem;
+
+    @include tablet {
+      min-width: 14rem;
+    }
+  }
+
+  &__border {
+    @include reservation-title-border;
   }
 
   &__flexbox {
-    @include flex-box(flex-start, center);
+    @include flex-box(space-evenly, center);
   }
 
   &__left {
-    padding-right: 3rem;
+    width: 40%;
+  }
+
+  &__right {
+    width: 40%;
   }
 }
 
 .feature {
   @include flex-box(flex-start, center);
   padding-bottom: 0.25rem;
+  width: 14rem;
 
   &__icon {
     @include height-width(2.5rem, 2.5rem);
     min-width: 2.5rem;
-    fill: $secondary-color-dark;
+    fill: black;
   }
 
   &__title {

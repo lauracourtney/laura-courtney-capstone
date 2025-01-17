@@ -3,8 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .navigation {
-  @include mobile-styling;
-  padding-bottom: 1rem;
+  background-color: $primary-color-light;
 
   &__menu {
     @include flex-box(space-evenly, baseline);
@@ -12,6 +11,10 @@
     @include tablet {
       @include flex-box(flex-end, flex-end, nowrap, column);
       padding: 0 2rem;
+    }
+
+    @include desktop {
+      padding: 0 6rem 2rem 6rem;
     }
   }
 

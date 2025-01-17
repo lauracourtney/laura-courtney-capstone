@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Header.scss";
 import HorizontalLogo from "../../assets/images/horizontal-logo.png";
 import NavMenu from "../NavMenu/NavMenu";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,11 +15,13 @@ export default function Header() {
     <header className="header">
       <div className="header__top">
         <div className="header__left">
-          <img
-            src={HorizontalLogo}
-            alt="Vayogers Haven Logo"
-            className="header__logo"
-          />
+          <Link to="/">
+            <img
+              src={HorizontalLogo}
+              alt="Vayogers Haven Logo"
+              className="header__logo"
+            />
+          </Link>
         </div>
 
         <svg

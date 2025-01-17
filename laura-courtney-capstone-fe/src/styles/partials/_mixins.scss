@@ -35,13 +35,60 @@
   padding: 2rem;
 }
 
+@mixin desktop-padding {
+  padding: 0 7rem;
+}
+
+@mixin logo {
+  @include height-width(3rem, auto);
+
+  @include tablet {
+    @include height-width(4rem, auto);
+  }
+}
+
+@mixin footer-item {
+  padding-bottom: 1rem;
+  width: 50%;
+}
+
+@mixin footer-item-title {
+  padding-bottom: 0.5rem;
+}
+
+@mixin reservation-title-border {
+  border-bottom: 0.25rem solid $primary-color;
+  width: 100%;
+}
+
+@mixin reservation-section-title {
+  @include flex-box(space-between, center);
+
+  @include tablet {
+    padding-bottom: 2rem;
+  }
+}
+
 @mixin button {
   border: 0.15rem solid $secondary-color-dark;
   border-radius: 0.5rem;
-  background-color: $secondary-color-light;
+  background-color: $primary-color;
   padding: 0.5rem 1rem;
   width: 100%;
   margin-top: 1rem;
+  color: $primary-color-light;
+}
+
+@mixin confirm-item {
+  @include flex-box(space-between, baseline);
+}
+
+@mixin confirm-item-padding {
+  padding-bottom: 0.25rem;
+}
+
+@mixin confirm-date-flex {
+  @include flex-box(space-between, center);
 }
 
 @mixin dropdown {

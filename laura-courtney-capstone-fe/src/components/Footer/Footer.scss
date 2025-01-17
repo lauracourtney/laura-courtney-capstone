@@ -4,26 +4,45 @@
 
 .footer {
   @include mobile-styling;
-  @include flex-box(space-between, flex-start);
+  @include flex-box(space-between, center, nowrap, column);
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  @include desktop {
+    padding: 2rem 3rem;
+  }
+
+  &__left {
+    @include flex-box(space-between, flex-start);
+    width: 100%;
+  }
 
   &__logo {
-    @include height-width(6rem, auto);
+    @include height-width(5rem, auto);
+
+    @include tablet {
+      @include height-width(8rem, auto);
+      margin-top: -5rem;
+    }
   }
 }
 
 .location {
-  width: 30%;
+  @include footer-item;
 
   &__title {
-    padding-bottom: 0.5rem;
+    @include footer-item-title;
   }
 }
 
 .contact {
-  width: 40%;
+  @include footer-item;
+  @include flex-box(center, flex-end, nowrap, column);
 
   &__title {
-    padding-bottom: 0.5rem;
+    @include footer-item-title;
   }
 }
 
@@ -33,6 +52,10 @@
     fill: $primary-color-dark;
     padding-left: 0.5rem;
     width: 30%;
+
+    @include tablet {
+      @include height-width(3rem, 3rem);
+    }
 
     &:hover {
       fill: $secondary-color-dark;

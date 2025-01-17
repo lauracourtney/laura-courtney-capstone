@@ -9,8 +9,20 @@
     padding-bottom: 0.5rem;
   }
 
+  &__top {
+    @include reservation-section-title;
+  }
+
+  &__title {
+    min-width: 8.5rem;
+  }
+
   &__border {
-    border-bottom: 0.25rem solid $primary-color-dark;
+    @include reservation-title-border;
+  }
+
+  &__category {
+    @include reservation-section-title;
   }
 
   &__total {

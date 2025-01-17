@@ -23,7 +23,7 @@ export default function ConfirmationPage({
         closeModal={closeModal}
       />
       <Pricing pets={pets} rates={rates} />
-      <DetailsForm />
+      <DetailsForm closeModal={closeModal} />
     </section>
   );
 }

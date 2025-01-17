@@ -4,7 +4,11 @@ export default function Features() {
   return (
     <section className="features">
       <h1 className="features__title">Make a Reservation</h1>
-      <h2 className="features__subtitle">Cabin Features</h2>
+
+      <div className="features__features">
+        <h2 className="features__subtitle">Cabin Features</h2>
+        <div className="features__border"></div>
+      </div>
 
       <div className="features__flexbox">
         <div className="features__left">

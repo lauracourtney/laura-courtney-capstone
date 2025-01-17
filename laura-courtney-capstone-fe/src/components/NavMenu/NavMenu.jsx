@@ -6,13 +6,13 @@ export default function NavMenu() {
     <nav className="navigation">
       <div className="navigation__menu">
         <NavLink to="/" className="navigation__link">
-          <h3 className="navigation__item">Home</h3>
+          <h4 className="navigation__item">Home</h4>
         </NavLink>
         <NavLink to="/booking" className="navigation__link">
-          <h3 className="navigation__item">Booking</h3>
+          <h4 className="navigation__item">Booking</h4>
         </NavLink>
         <NavLink to="/booking" className="navigation__link">
-          <h3 className="navigation__item">Local Attractions</h3>
+          <h4 className="navigation__item">Local Attractions</h4>
         </NavLink>
       </div>
     </nav>

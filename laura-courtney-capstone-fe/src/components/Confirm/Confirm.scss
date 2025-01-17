@@ -4,8 +4,18 @@
 
 .confirmation {
   @include mobile-styling;
+  padding-bottom: 0rem;
+
+  &__top {
+    @include reservation-section-title;
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
 
   &__title {
+    min-width: 13rem;
     padding-bottom: 1rem;
   }
 
@@ -19,25 +29,43 @@
 }
 
 .confirm-adults {
+  @include confirm-item;
+
   &__item {
-    padding-bottom: 0.25rem;
+    @include confirm-item-padding;
   }
 }
 
 .confirm-children {
+  @include confirm-item;
+
   &__item {
-    padding-bottom: 0.25rem;
+    @include confirm-item-padding;
   }
 }
 
 .confirm-pets {
+  @include confirm-item;
+
   &__item {
-    padding-bottom: 0.25rem;
+    @include confirm-item-padding;
   }
 }
 
 .confirm-dates {
   &__date {
-    padding-bottom: 0.25rem;
+    @include confirm-item-padding;
+  }
+
+  &__checkin {
+    @include confirm-date-flex;
+  }
+
+  &__checkout {
+    @include confirm-date-flex;
+  }
+
+  &__date {
+    width: 57%;
   }
 }

@@ -4,8 +4,12 @@
 
 .home {
   @include tablet {
-    padding: 2.5rem;
+    @include tablet-padding;
     background-color: $primary-color-light;
+  }
+
+  @include desktop {
+    @include desktop-padding;
   }
 }
 

@@ -1,6 +1,13 @@
 import "./DetailsForm.scss";
 
-export default function DetailsForm() {
+export default function DetailsForm({ closeModal }) {
+  const handleClick = () => {
+    alert(
+      "Booking confirmed, email with full details will be sent upon review"
+    );
+    closeModal();
+  };
+
   return (
     <section className="form">
       <form action="submit" className="form__item">
@@ -33,7 +40,7 @@ export default function DetailsForm() {
         </div>
       </form>
 
-      <button className="form__button">
+      <button className="form__button" onClick={handleClick}>
         <h3>Confirm Details & Request Booking</h3>
       </button>
     </section>

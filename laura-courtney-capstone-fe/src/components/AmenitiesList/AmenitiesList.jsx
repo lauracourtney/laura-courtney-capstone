@@ -19,11 +19,13 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Beds</h5>
+            <h4 className="item__title">Beds</h4>
             <p className="item__description">
               {" "}
-              Luxurious, eco-friendly linens and mattresses for the ultimate
-              restorative sleep.
+              Experience unparalleled comfort on our two queen-sized beds,
+              featuring eco-friendly linens and premium mattresses designed for
+              the perfect balance of support and luxury. Wake up refreshed and
+              rejuvenated in serene coastal tranquility.
             </p>
           </div>
         </div>
@@ -35,11 +37,14 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Rainfall Shower</h5>
+            <h4 className="item__title">Rainfall Shower</h4>
             <p className="item__description">
               {" "}
-              Enjoy a spa-like experience in a spacious shower designed to
-              rejuvenate.
+              Immerse yourself in a spa-like experience with our luxurious
+              rainfall shower, set in a stunning stone room for a natural,
+              serene ambiance. Enjoy the warmth of heated floors as you unwind,
+              with the added eco-friendly touch of a recycled water filtration
+              system, ensuring both indulgence and sustainability.
             </p>
           </div>
         </div>
@@ -51,10 +56,13 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Meditation Nook</h5>
+            <h4 className="item__title">Meditation Nook</h4>
             <p className="item__description">
-              A serene indoor or outdoor space designed for yoga, mindfulness,
-              or journaling.
+              Discover tranquility in our indoor meditation nook, featuring
+              natural stone accents and lush plant elements. Perfectly designed
+              for yoga, mindfulness, or journaling, this serene space brings the
+              calming essence of nature indoors, creating a sanctuary for
+              relaxation and reflection.
             </p>
           </div>
         </div>
@@ -66,7 +74,7 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Natural Lighting & Decor</h5>
+            <h4 className="item__title">Natural Lighting & Decor</h4>
             <p className="item__description">
               Large windows or skylights that flood the cabin with natural
               light, connecting the indoors with the outdoors. Minimalist
@@ -84,7 +92,7 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Indoor & Outdoor Fire</h5>
+            <h4 className="item__title">Indoor & Outdoor Fire</h4>
             <p className="item__description">
               Embrace warmth and relaxation with both indoor and outdoor
               fireplaces. Inside, unwind by the glowing hearth, perfect for cozy
@@ -101,7 +109,7 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Waterfront Access</h5>
+            <h4 className="item__title">Waterfront Access</h4>
             <p className="item__description">
               Step directly onto the shoreline with our exclusive oceanfront
               access. Whether you're savoring your morning coffee, launching a
@@ -120,10 +128,12 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Private Hot Tub</h5>
+            <h4 className="item__title">Private Hot Tub</h4>
             <p className="item__description">
-              Relax under the stars with a warm soak, perfect for unwinding
-              after a day of exploring.
+              Unwind in your private hot tub, set in a serene space designed for
+              ultimate relaxation. Enjoy a warm, soothing soak surrounded by
+              nature-inspired ambiance, perfect for stargazing and rejuvenating
+              after a day of adventure.
             </p>
           </div>
         </div>
@@ -135,9 +145,11 @@ export default function AmenitiesList() {
             className="item__photo"
           />
           <div className="item__details">
-            <h5 className="item__title">Outdoor Sauna</h5>
+            <h4 className="item__title">Outdoor Sauna</h4>
             <p className="item__description">
-              A wood-fired sauna for a rejuvenating sweat session.
+              Relax and detox in our intimate wood-fired outdoor sauna, designed
+              for two. Surrounded by nature, this cozy retreat provides the
+              perfect setting for a soothing, rejuvenating sweat session.
             </p>
           </div>
         </div>

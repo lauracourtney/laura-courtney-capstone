@@ -6,12 +6,7 @@
   @include mobile-styling;
 
   &__button {
-    border: 0.15rem solid $secondary-color-dark;
-    border-radius: 0.5rem;
-    background-color: $secondary-color-light;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    margin-top: 1rem;
+    @include button;
   }
 
   &__item {
