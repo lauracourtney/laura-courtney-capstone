@@ -2,11 +2,16 @@ import "./DetailsForm.scss";
 import { useState } from "react";
 import SubmitModal from "../SubmitModal/SubmitModal";
 
-export default function DetailsForm({ closeModal }) {
+export default function DetailsForm() {
   const [openSubmitModal, setOpenSubmitModal] = useState(false);
+  const [firstName, setFirstName] = useState(null);
 
   const handleClick = () => {
     setOpenSubmitModal(true);
+  };
+
+  const handleNameChange = (e) => {
+    setFirstName(e.target.value);
   };
 
   return (
@@ -14,7 +19,7 @@ export default function DetailsForm({ closeModal }) {
       {openSubmitModal && (
         <>
           <div className="submit-background"></div>
-          <SubmitModal />
+          <SubmitModal firstName={firstName} />
         </>
       )}
       <form action="submit" className="form__item">
@@ -27,6 +32,7 @@ export default function DetailsForm({ closeModal }) {
               name="firstName"
               className="form__input"
               autoComplete="given-name"
+              onChange={handleNameChange}
             />
           </label>
         </div>

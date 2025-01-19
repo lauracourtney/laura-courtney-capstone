@@ -1,7 +1,7 @@
 import "./SubmitModal.scss";
 import { Link } from "react-router-dom";
 
-export default function SubmitModal() {
+export default function SubmitModal({ firstName }) {
   return (
     <section className="submit-modal">
       <Link to="/">
@@ -15,6 +15,7 @@ export default function SubmitModal() {
       </Link>
 
       <h3 className="submit-modal__title">Submission Recieved</h3>
+      <p className="submit-modal__body">Thanks for your booking {firstName}!</p>
       <p className="submit-modal__body">
         An email with full booking details will be sent after review.
       </p>
