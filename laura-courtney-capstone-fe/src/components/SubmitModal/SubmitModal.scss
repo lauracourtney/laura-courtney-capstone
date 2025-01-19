@@ -5,7 +5,6 @@
 .submit-modal {
   @include mobile-styling;
   @include modal-positioning(relative, 15);
-  top: -10%;
   @include height-width(14rem, 100%);
   box-shadow: 0 0.5rem 1rem $primary-color-dark(0, 0, 0, 0.3);
   border-radius: 0.5rem;

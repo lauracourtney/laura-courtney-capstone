@@ -6,8 +6,9 @@ export default function DetailsForm() {
   const [openSubmitModal, setOpenSubmitModal] = useState(false);
   const [firstName, setFirstName] = useState(null);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     setOpenSubmitModal(true);
+    e.preventDefault();
   };
 
   const handleNameChange = (e) => {
