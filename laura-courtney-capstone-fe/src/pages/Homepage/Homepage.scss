@@ -1,0 +1,29 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home {
+  @include tablet {
+    @include tablet-padding;
+    background-color: $primary-color-light;
+  }
+
+  @include desktop {
+    @include desktop-padding;
+  }
+}
+
+.hero {
+  background-image: url("../../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  @include height-width(20rem, 100%);
+
+  @include tablet {
+    @include height-width(30rem, 100%);
+  }
+
+  @include desktop {
+    @include height-width(35rem, 100%);
+  }
+}

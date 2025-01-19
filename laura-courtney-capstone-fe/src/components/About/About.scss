@@ -1,0 +1,15 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.about {
+  @include mobile-styling;
+
+  @include tablet {
+    padding: 2rem;
+  }
+
+  &__content {
+    padding: 0.5rem 0;
+  }
+}

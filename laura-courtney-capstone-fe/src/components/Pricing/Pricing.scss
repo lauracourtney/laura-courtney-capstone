@@ -1,0 +1,40 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.breakdown {
+  @include mobile-styling;
+
+  &__item {
+    padding-bottom: 0.25rem;
+  }
+
+  &__top {
+    @include reservation-section-title;
+  }
+
+  &__title {
+    min-width: 8.5rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      min-width: 10rem;
+    }
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
+
+  &__category {
+    @include reservation-section-title;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__total {
+    padding-top: 0.5rem;
+  }
+}

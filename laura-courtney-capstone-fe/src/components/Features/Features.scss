@@ -1,0 +1,90 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.features {
+  @include mobile-styling;
+  padding-bottom: 0rem;
+
+  @include tablet {
+    @include tablet-padding;
+    padding-bottom: 0rem;
+  }
+
+  &__title {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__features {
+    @include reservation-section-title;
+  }
+
+  &__subtitle {
+    padding-bottom: 0.5rem;
+    min-width: 12rem;
+
+    @include tablet {
+      min-width: 14rem;
+    }
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
+
+  &__flexbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
+    align-items: center;
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__left {
+    width: 40%;
+  }
+
+  &__right {
+    width: 40%;
+  }
+
+  &__details {
+    padding-top: 1rem;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
+  }
+
+  &__content {
+    @include desktop {
+      @include flex-box(space-evenly, center);
+    }
+  }
+
+  &__bottom {
+    @include desktop {
+      width: 35%;
+    }
+  }
+}
+
+.feature {
+  @include flex-box(flex-start, center);
+  padding-bottom: 0.25rem;
+  width: 14rem;
+
+  &__icon {
+    @include height-width(2.5rem, 2.5rem);
+    min-width: 2.5rem;
+    fill: black;
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+  }
+}

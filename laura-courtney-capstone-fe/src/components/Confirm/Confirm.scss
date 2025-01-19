@@ -1,0 +1,78 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.confirmation {
+  @include mobile-styling;
+  padding-bottom: 0rem;
+
+  &__top {
+    @include reservation-section-title;
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
+
+  &__title {
+    min-width: 13rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      min-width: 15rem;
+    }
+  }
+
+  &__back {
+    @include height-width(2rem, 2rem);
+    z-index: 10;
+    cursor: pointer;
+    fill: $secondary-color-dark;
+    margin-bottom: 2rem;
+  }
+}
+
+.confirm-adults {
+  @include confirm-item;
+
+  &__item {
+    @include confirm-item-padding;
+  }
+}
+
+.confirm-children {
+  @include confirm-item;
+
+  &__item {
+    @include confirm-item-padding;
+  }
+}
+
+.confirm-pets {
+  @include confirm-item;
+
+  &__item {
+    @include confirm-item-padding;
+  }
+}
+
+.confirm-dates {
+  display: grid;
+
+  &__date {
+    @include confirm-item-padding;
+    width: 8.25rem;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  &__checkin {
+    @include confirm-date-flex;
+  }
+
+  &__checkout {
+    @include confirm-date-flex;
+  }
+}

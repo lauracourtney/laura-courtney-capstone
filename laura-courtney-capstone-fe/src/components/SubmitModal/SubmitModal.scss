@@ -1,0 +1,31 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.submit-modal {
+  @include mobile-styling;
+  @include modal-positioning(relative, 15);
+  @include height-width(14rem, 100%);
+  box-shadow: 0 0.5rem 1rem $primary-color-dark(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  background-color: $primary-color;
+
+  @include tablet {
+    padding: 2rem;
+  }
+
+  &__close {
+    @include height-width(2rem, 2rem);
+    fill: $primary-color-light;
+    text-align: end;
+  }
+
+  &__title {
+    @include centered-text-light;
+    padding-bottom: 1rem;
+  }
+
+  &__body {
+    @include centered-text-light;
+  }
+}

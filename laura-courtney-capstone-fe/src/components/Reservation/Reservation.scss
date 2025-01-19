@@ -1,0 +1,135 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reservation {
+  @include mobile-styling;
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  &__top {
+    @include reservation-section-title;
+    padding-bottom: 0.5rem;
+  }
+
+  &__title {
+    min-width: 12.5rem;
+
+    @include tablet {
+      min-width: 15rem;
+    }
+  }
+
+  &__border {
+    @include reservation-title-border;
+  }
+
+  &__contents {
+    @include tablet {
+      @include flex-box(space-between, center);
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__rate {
+    padding-top: 1rem;
+  }
+
+  &__guests {
+    @include flex-box(flex-start, flex-start, nowrap, column);
+  }
+
+  &__dates {
+    @include flex-box(space-between, center);
+    padding-top: 1rem;
+
+    @include tablet {
+      @include flex-box(flex-start, center, nowrap, column);
+      padding: 0;
+    }
+  }
+
+  &__checkin {
+    @include flex-box(center, flex-start, nowrap, column);
+
+    @include tablet {
+      @include flex-box(flex-start, flex-end, nowrap, column);
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__checkout {
+    @include flex-box(center, flex-end, nowrap, column);
+
+    @include tablet {
+      @include flex-box(flex-start, flex-end, nowrap, column);
+    }
+  }
+
+  &__button {
+    @include button;
+  }
+}
+
+.adults {
+  padding: 0.5rem 0;
+  @include flex-box(space-between, center);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+
+  &__dropdown {
+    @include dropdown;
+  }
+}
+
+.children {
+  padding: 0.5rem 0;
+  @include flex-box(flex-start, center);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+
+  &__dropdown {
+    @include dropdown;
+  }
+}
+
+.pets {
+  padding: 0.5rem 0;
+  @include flex-box(flex-start, baseline);
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+
+  &__dropdown {
+    @include dropdown;
+  }
+}
+
+.react-calendar {
+  @include height-width(auto, 100% !important);
+  background-color: $primary-color !important;
+  border: 1px solid $primary-color-dark !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-size: 1.25rem;
+  line-height: 1.5rem !important;
+  margin-top: 1rem;
+}
+
+.rate {
+  padding: 2rem 1rem 1rem 1rem;
+  @include flex-box(flex-start, center, nowrap, column);
+}
+
+.modal-background {
+  @include modal-positioning(fixed, 2);
+  background-color: $secondary-color-light;
+  @include height-width(100vh, 100%);
+  z-index: 2;
+}

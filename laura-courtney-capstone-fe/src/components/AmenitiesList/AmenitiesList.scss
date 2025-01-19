@@ -1,0 +1,84 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+.amenities {
+  @include mobile-styling;
+
+  @include tablet {
+    padding: 0rem;
+  }
+
+  @include desktop {
+    @include flex-box(space-between, baseline);
+  }
+
+  &__left {
+    @include desktop {
+      width: 45%;
+    }
+  }
+
+  &__right {
+    @include desktop {
+      width: 45%;
+    }
+  }
+}
+
+.item {
+  @include flex-box(flex-start, flex-start, nowrap, column-reverse);
+  @include mobile-styling;
+  background-color: $secondary-color-light;
+  border-radius: 1%;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 12px rgba(74, 64, 54, 0.3), 0 2px 4px rgba(74, 64, 54, 0.2);
+
+  @include tablet {
+    @include flex-box(flex-start, flex-start, nowrap, row);
+    padding: 2rem;
+  }
+
+  @include desktop {
+    @include flex-box(space-between, center, nowrap, column-reverse);
+    min-height: 50rem;
+    min-width: 32rem;
+  }
+
+  &__details {
+    padding-bottom: 1rem;
+  }
+
+  &__photo {
+    @include height-width(auto, 100%);
+    border: 0.15rem solid $secondary-color-dark;
+    border-radius: 1%;
+
+    @include tablet {
+      @include height-width(16.5rem, 16.5rem);
+      padding: 0;
+    }
+
+    @include desktop {
+      @include height-width(30rem, auto);
+    }
+  }
+
+  &__description {
+    @include tablet {
+      padding-left: 1rem;
+    }
+  }
+
+  &__title {
+    padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding-left: 1rem;
+    }
+  }
+}

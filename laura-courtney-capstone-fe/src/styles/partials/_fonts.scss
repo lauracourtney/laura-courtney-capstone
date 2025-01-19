@@ -1,0 +1,76 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@font-face {
+  font-family: "MerriweatherSan";
+  src: url("../../assets/fonts/MerriweatherSans-Bold.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "MerriweatherSan";
+  src: url("../../assets/fonts/MerriweatherSans-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url("../../assets/fonts/TitilliumWeb-Black.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+body {
+  @include font("MerriweatherSan", 0.875rem, 1.5rem, 400);
+  @include tablet {
+    @include font("MerriweatherSan", 1rem, 1.75rem, 400);
+    color: $primary-color-dark;
+  }
+}
+
+h1 {
+  @include font("MerriweatherSan", 2rem, 2.5rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 2.25rem, 2.75rem, 600);
+  }
+}
+
+h2 {
+  @include font("MerriweatherSan", 1.5rem, 2rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 1.75rem, 2.25rem, 600);
+  }
+}
+
+h3 {
+  @include font("MerriweatherSan", 1.25rem, 1.75rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 1.5rem, 2rem, 600);
+  }
+}
+
+h4 {
+  @include font("MerriweatherSan", 1rem, 1.5rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 1.125rem, 1.625rem, 600);
+  }
+}
+
+h5 {
+  @include font("MerriweatherSan", 0.875rem, 1.25rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 1rem, 1.5rem, 600);
+  }
+}
+
+h6 {
+  @include font("MerriweatherSan", 0.8125rem, 1.25rem, 600);
+  @include tablet {
+    @include font("MerriweatherSan", 0.875rem, 1.375rem, 600);
+  }
+}

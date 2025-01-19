@@ -1,0 +1,65 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  @include mobile-styling;
+  @include flex-box(space-between, center, nowrap, column);
+
+  @include tablet {
+    @include tablet-padding;
+  }
+
+  @include desktop {
+    @include desktop-padding;
+    padding-top: 2rem;
+  }
+
+  &__left {
+    @include flex-box(space-between, flex-start);
+    width: 100%;
+  }
+
+  &__logo {
+    @include height-width(5rem, auto);
+
+    @include tablet {
+      @include height-width(8rem, auto);
+      margin-top: -5rem;
+    }
+  }
+}
+
+.location {
+  @include footer-item;
+
+  &__title {
+    @include footer-item-title;
+  }
+}
+
+.contact {
+  @include footer-item;
+  @include flex-box(center, flex-end, nowrap, column);
+
+  &__title {
+    @include footer-item-title;
+  }
+}
+
+.socials {
+  &__icon {
+    @include height-width(2rem, 2rem);
+    fill: $primary-color-dark;
+    padding-left: 0.5rem;
+    width: 30%;
+
+    @include tablet {
+      @include height-width(3rem, 3rem);
+    }
+
+    &:hover {
+      fill: $secondary-color-dark;
+    }
+  }
+}
