@@ -52,10 +52,12 @@ export default function Reservation() {
         <div className="reservation__left">
           <div className="reservation__guests">
             <div className="adults">
-              <label className="adults__label">
+              <label className="adults__label" htmlFor="adults">
                 <h4>Number of Adults:</h4>
               </label>
               <select
+                id="adults"
+                name="adults"
                 className="adults__dropdown"
                 onChange={(e) => setAdults(e.target.value)}
               >
@@ -69,10 +71,12 @@ export default function Reservation() {
             </div>
 
             <div className="children">
-              <label className="children__label">
+              <label className="children__label" htmlFor="children">
                 <h4>Number of Children:</h4>
               </label>
               <select
+                id="children"
+                name="children"
                 className="children__dropdown"
                 onChange={(e) => setChildren(e.target.value)}
               >
@@ -85,10 +89,12 @@ export default function Reservation() {
             </div>
 
             <div className="pets">
-              <label className="pets__label">
+              <label className="pets__label" htmlFor="pets">
                 <h4>Number of Pets:</h4>
               </label>
               <select
+                id="pets"
+                name="pets"
                 className="pets__dropdown"
                 onChange={(e) => setPets(e.target.value)}
               >

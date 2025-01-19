@@ -1,5 +1,4 @@
 import "./DetailsForm.scss";
-import { useEffect } from "react";
 import { useState } from "react";
 import SubmitModal from "../SubmitModal/SubmitModal";
 
@@ -9,17 +8,6 @@ export default function DetailsForm({ closeModal }) {
   const handleClick = () => {
     setOpenSubmitModal(true);
   };
-
-  useEffect(() => {
-    if (openSubmitModal) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-    return () => {
-      document.body.classList.remove("modal-open");
-    };
-  }, [openSubmitModal]);
 
   return (
     <section className="form">
@@ -33,28 +21,51 @@ export default function DetailsForm({ closeModal }) {
         <div className="form__item">
           <label htmlFor="first-name" className="form__item">
             <h4>First name</h4>
-            <input type="text" id="first-name" className="form__input" />
+            <input
+              type="text"
+              id="first-name"
+              name="firstName"
+              className="form__input"
+              autoComplete="given-name"
+            />
           </label>
         </div>
 
         <div className="form__item">
           <label htmlFor="last-name" className="form__item">
             <h4>Last name</h4>
-            <input type="text" id="last-name" className="form__input" />
+            <input
+              type="text"
+              id="last-name"
+              name="lastName"
+              className="form__input"
+              autoComplete="family-name"
+            />
           </label>
         </div>
 
         <div className="form__item">
           <label htmlFor="email" className="form__item">
             <h4>Email</h4>
-            <input type="text" id="email" className="form__input" />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              className="form__input"
+              autoComplete="email"
+            />
           </label>
         </div>
 
         <div className="form__item">
           <label htmlFor="comments" className="form__item">
             <h4>Additional Comments/Requests</h4>
-            <input type="text" id="comments" className="form__requests" />
+            <input
+              type="text"
+              id="comments"
+              autoComplete="off"
+              className="form__requests"
+            />
           </label>
         </div>
       </form>
