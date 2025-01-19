@@ -8,6 +8,7 @@
 
   @include tablet {
     @include tablet-padding;
+    padding-bottom: 0rem;
   }
 
   &__title {
@@ -37,6 +38,10 @@
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1.25rem;
     align-items: center;
+
+    @include desktop {
+      width: 60%;
+    }
   }
 
   &__left {
@@ -45,6 +50,26 @@
 
   &__right {
     width: 40%;
+  }
+
+  &__details {
+    padding-top: 1rem;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
+  }
+
+  &__content {
+    @include desktop {
+      @include flex-box(space-evenly, center);
+    }
+  }
+
+  &__bottom {
+    @include desktop {
+      width: 35%;
+    }
   }
 }
 
