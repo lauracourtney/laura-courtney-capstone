@@ -11,7 +11,7 @@ export default function Reservation() {
   const [adults, setAdults] = useState(0);
   const [children, setChildren] = useState(0);
   const [pets, setPets] = useState(0);
-  const [openConfirmModal, setOpenConfirmModal] = useState(null);
+  const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [error, setError] = useState(null);
   const [rates, setRates] = useState("0");
 
@@ -20,7 +20,6 @@ export default function Reservation() {
   };
 
   const closeModal = () => {
-    console.log("closeModal called");
     setOpenConfirmModal(false);
   };
 
@@ -31,7 +30,6 @@ export default function Reservation() {
       setCheckIn(value[0]);
       setCheckOut(value[1]);
     }
-    console.log("date value", value);
 
     try {
       let url = `http://localhost:8080/api/rates`;
@@ -115,7 +113,6 @@ export default function Reservation() {
         </div>
       </div>
 
-      {console.log("value", [checkIn, checkOut])}
       <Calendar
         onChange={handleDateChange}
         value={[checkIn, checkOut]}

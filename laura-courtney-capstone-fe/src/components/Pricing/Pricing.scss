@@ -6,7 +6,7 @@
   @include mobile-styling;
 
   &__item {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
   }
 
   &__top {
@@ -15,6 +15,11 @@
 
   &__title {
     min-width: 8.5rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      min-width: 10rem;
+    }
   }
 
   &__border {
@@ -23,6 +28,10 @@
 
   &__category {
     @include reservation-section-title;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__total {

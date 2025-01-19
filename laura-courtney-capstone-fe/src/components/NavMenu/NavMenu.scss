@@ -10,11 +10,6 @@
 
     @include tablet {
       @include flex-box(flex-end, flex-end, nowrap, column);
-      padding: 0 2rem;
-    }
-
-    @include desktop {
-      padding: 0 6rem 2rem 6rem;
     }
   }
 

@@ -17,6 +17,10 @@
   &__title {
     min-width: 13rem;
     padding-bottom: 1rem;
+
+    @include tablet {
+      min-width: 15rem;
+    }
   }
 
   &__back {
@@ -53,8 +57,15 @@
 }
 
 .confirm-dates {
+  display: grid;
+
   &__date {
     @include confirm-item-padding;
+    width: 8.25rem;
+
+    @include tablet {
+      width: auto;
+    }
   }
 
   &__checkin {
@@ -63,9 +74,5 @@
 
   &__checkout {
     @include confirm-date-flex;
-  }
-
-  &__date {
-    width: 57%;
   }
 }

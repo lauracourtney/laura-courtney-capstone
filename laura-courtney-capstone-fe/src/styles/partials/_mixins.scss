@@ -31,12 +31,17 @@
   color: $primary-color-dark;
 }
 
+@mixin centered-text-light {
+  text-align: center;
+  color: $primary-color-light;
+}
+
 @mixin tablet-padding {
   padding: 2rem;
 }
 
 @mixin desktop-padding {
-  padding: 0 7rem;
+  padding: 2rem 7rem;
 }
 
 @mixin logo {
@@ -65,8 +70,15 @@
   @include flex-box(space-between, center);
 
   @include tablet {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
+}
+
+@mixin modal-positioning($position, $z-index) {
+  position: $position;
+  top: 0;
+  left: 0;
+  z-index: $z-index;
 }
 
 @mixin button {

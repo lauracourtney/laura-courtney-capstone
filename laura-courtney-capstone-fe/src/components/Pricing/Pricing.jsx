@@ -35,7 +35,7 @@ export default function Pricing({ pets, rates }) {
       <div className="breakdown__border"></div>
 
       <div className="breakdown__category">
-        <h4 className="breakdown__item">Total Cost:</h4>
+        <h4 className="breakdown__total">Total Cost:</h4>
         <h4>
           $
           {petFee +

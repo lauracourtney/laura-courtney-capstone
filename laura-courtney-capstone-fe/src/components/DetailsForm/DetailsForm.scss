@@ -16,10 +16,19 @@
   &__input {
     @include height-width(2rem, 100%);
     border-radius: 0.5rem;
+    padding: 0 0 0.2rem 0.25rem;
   }
 
   &__requests {
     @include height-width(3rem, 100%);
     border-radius: 0.5rem;
+    padding: 0 0 1.5rem 0.25rem;
   }
+}
+
+.submit-background {
+  @include modal-positioning(fixed, 6);
+  background-color: $secondary-color-light;
+  @include height-width(300%, 100%);
+  overflow: hidden;
 }

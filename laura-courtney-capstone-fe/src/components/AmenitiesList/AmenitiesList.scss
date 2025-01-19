@@ -32,7 +32,7 @@
 
 .item {
   @include flex-box(flex-start, flex-start, nowrap, column-reverse);
-  padding: 1rem;
+  @include mobile-styling;
   background-color: $secondary-color-light;
   border-radius: 1%;
   margin-bottom: 1rem;
@@ -46,6 +46,7 @@
   @include desktop {
     @include flex-box(space-between, center, nowrap, column-reverse);
     min-height: 50rem;
+    min-width: 32rem;
   }
 
   &__details {
