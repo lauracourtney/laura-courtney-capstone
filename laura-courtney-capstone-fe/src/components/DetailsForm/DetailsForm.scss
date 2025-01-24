@@ -17,6 +17,20 @@
     @include height-width(2rem, 100%);
     border-radius: 0.5rem;
     padding: 0 0 0.2rem 0.25rem;
+
+    &--error {
+      border-color: red;
+    }
+  }
+
+  &__email {
+    @include height-width(2rem, 100%);
+    border-radius: 0.5rem;
+    padding: 0 0 0.2rem 0.25rem;
+
+    &--error {
+      border-color: red;
+    }
   }
 
   &__requests {
@@ -24,6 +38,10 @@
     border-radius: 0.5rem;
     padding: 0 0 1.5rem 0.25rem;
   }
+}
+
+.errors {
+  padding-top: 0.25rem;
 }
 
 .submit-background {

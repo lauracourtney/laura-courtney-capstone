@@ -131,5 +131,4 @@
   @include modal-positioning(fixed, 2);
   background-color: $secondary-color-light;
   @include height-width(100vh, 100%);
-  z-index: 2;
 }

@@ -1,18 +1,59 @@
 import "./DetailsForm.scss";
 import { useState } from "react";
 import SubmitModal from "../SubmitModal/SubmitModal";
+import errorIcon from "../../assets/images/error.svg";
 
 export default function DetailsForm() {
   const [openSubmitModal, setOpenSubmitModal] = useState(false);
-  const [firstName, setFirstName] = useState(null);
+  const [emptyError, setEmptyError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [isFormValid, setIsFormValid] = useState(true);
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    comments: "",
+  });
+
+  const validEmailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
   const handleClick = (e) => {
-    setOpenSubmitModal(true);
     e.preventDefault();
+    setEmptyError("");
+    setEmailError("");
+
+    if (!formData.first_name || !formData.last_name || !formData.email) {
+      setIsFormValid(false);
+      setEmptyError(
+        <>
+          <img className="error-icon" src={errorIcon} />
+          This field is required
+        </>
+      );
+      return;
+    }
+
+    if (!validEmailFormat.test(formData.email)) {
+      setIsFormValid(false);
+      setEmailError(
+        <>
+          <img className="error-icon" src={errorIcon} />
+          Please enter a valid email
+        </>
+      );
+      return;
+    }
+
+    setIsFormValid(true);
+    setOpenSubmitModal(true);
   };
 
-  const handleNameChange = (e) => {
-    setFirstName(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((data) => ({
+      ...data,
+      [name]: value,
+    }));
   };
 
   return (
@@ -20,7 +61,7 @@ export default function DetailsForm() {
       {openSubmitModal && (
         <>
           <div className="submit-background"></div>
-          <SubmitModal firstName={firstName} />
+          <SubmitModal firstName={formData.first_name} />
         </>
       )}
       <form action="submit" className="form__item">
@@ -30,12 +71,18 @@ export default function DetailsForm() {
             <input
               type="text"
               id="first-name"
-              name="firstName"
-              className="form__input"
+              name="first_name"
+              className={`form__input ${
+                !isFormValid && !formData.first_name ? "form__input--error" : ""
+              }`}
               autoComplete="given-name"
-              onChange={handleNameChange}
+              onChange={handleChange}
+              value={formData.first_name}
             />
           </label>
+          {!formData.first_name && emptyError && (
+            <p className="errors">{emptyError}</p>
+          )}
         </div>
 
         <div className="form__item">
@@ -44,24 +91,41 @@ export default function DetailsForm() {
             <input
               type="text"
               id="last-name"
-              name="lastName"
-              className="form__input"
+              name="last_name"
+              className={`form__input ${
+                !isFormValid && !formData.last_name ? "form__input--error" : ""
+              }`}
               autoComplete="family-name"
+              value={formData.last_name}
+              onChange={handleChange}
             />
           </label>
+          {!formData.last_name && emptyError && (
+            <p className="errors">{emptyError}</p>
+          )}
         </div>
 
         <div className="form__item">
-          <label htmlFor="email" className="form__item">
+          <label htmlFor="email" className="form__label">
             <h4>Email</h4>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
-              className="form__input"
+              className={`form__email ${
+                (!isFormValid && !formData.email) || emailError
+                  ? "form__email--error"
+                  : ""
+              }`}
               autoComplete="email"
+              value={formData.email}
+              onChange={handleChange}
             />
           </label>
+          {emailError && <p className="errors">{emailError}</p>}
+          {!formData.email && emptyError && (
+            <p className="errors">{emptyError}</p>
+          )}
         </div>
 
         <div className="form__item">
@@ -70,8 +134,11 @@ export default function DetailsForm() {
             <input
               type="text"
               id="comments"
+              name="comments"
               autoComplete="off"
               className="form__requests"
+              value={formData.comments}
+              onChange={handleChange}
             />
           </label>
         </div>
